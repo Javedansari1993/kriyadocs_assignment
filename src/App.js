@@ -8,7 +8,7 @@ const App = () => {
   const [country, setCountry] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
-  const [continent, setContinent] = useState([
+  const continent = [
       "Africa",
       "Antarctica",
       "Asia",
@@ -16,7 +16,7 @@ const App = () => {
       "North-America",
       "Oceania",
       "South-America",
-  ]);
+  ];
 
   useEffect(() => {
       fetchData();
