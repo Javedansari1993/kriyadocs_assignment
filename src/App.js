@@ -8,15 +8,20 @@ const App = () => {
   const [country, setCountry] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
-  const continent = [
-      "Africa",
-      "Antarctica",
-      "Asia",
-      "Europe",
-      "North-America",
-      "Oceania",
-      "South-America",
-  ];
+//   const continent = [
+//       "Africa",
+//       "Antarctica",
+//       "Asia",
+//       "Europe",
+//       "North-America",
+//       "Oceania",
+//       "South-America",
+//   ];
+  const dynamic = new Set([])
+  continents.forEach((item)=>{
+    dynamic.add(item.continent)
+  })
+  const continent = Array.from(dynamic);
 
   useEffect(() => {
       fetchData();
